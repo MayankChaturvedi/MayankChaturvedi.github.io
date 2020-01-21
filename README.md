@@ -1,193 +1,160 @@
-# Portfolio one page template - ARCHIVED
+# modern-resume-theme [![Gem Version](https://badge.fury.io/rb/modern-resume-theme.svg)](https://badge.fury.io/rb/modern-resume-theme) [![Build Status](https://travis-ci.com/sproogen/modern-resume-theme.svg?branch=master)](https://travis-ci.com/sproogen/modern-resume-theme)
 
-Flat and responsive website template, designed and coded by [Maxim Orlov](https://github.com/orlovmax).
+*A modern simple static resume template and theme. Powered by Jekyll and GitHub pages.*
+*Host your own resume on GitHub for **free!***
 
-Demo: [http://website-templates.github.io/portfolio_one-page-template](http://website-templates.github.io/portfolio_one-page-template/)
+Now includes **Dark Mode**
 
-![Mockup demo](screenshots/pic.jpg)
-Product mockup created with [http://magicmockups.com/](http://magicmockups.com/)
+[View Demo](https://sproogen.github.io/modern-resume-theme/)
 
-## Contents
+![img](screenshot.png)
 
-- [Folder and file structure](#folder-and-file-structure)
-- [Requirements:](#requirements)
-    - [Editorconfig](#editorconfig)
-- [How to start](#how-to-start)
-- [Site configuration](#site-configuration)
-- [Tasks](#tasks)
-    - [Cleanup](#cleanup)
-    - [Dev](#dev)
-    - [Build](#build)
-    - [Rebuild](#rebuild)
-    - [Server](#server)
-    - [Sprite](#sprite)
-- [Live reload](#live-reload)
-- [License](#license)
+*Thank you for checking out my resume theme / template. If you have any feedback or suggestions for things I can add please let me know by either by raising an [issue](https://github.com/sproogen/modern-resume-theme/issues/new/choose) or feel free to send me an email to [sprog31@gmail.com](mailto:sprog31@gmail.com), I'm always happy to help.*
 
-## Folder and file structure
+*I always enjoy seeing how people are using my creations and if you would like to say thanks feel free to [buy me a coffee (buymeacoffee.com/vJ6HfLu)](https://buymeacoff.ee/vJ6HfLu).*
 
+*If you would like to see how I am using this then you can view my resume [here (jameswgrant.co.uk)](http://www.jameswgrant.co.uk/) and find the code [here (sproogen/jameswgrant)](https://github.com/sproogen/jameswgrant), hopefully this might help you.*
+
+You can view the project [roadmap here](https://github.com/sproogen/modern-resume-theme/projects/1).
+
+## Installation & setup guide
+This template is designed to be hosted using GitHub pages and so that's what these instructions will cover. If you plan on hosting it seperately then there might be some extra steps that we wont cover.
+
+Before starting it might be useful to familiarise yourself with [Jekyll](https://jekyllrb.com/docs/home/), [Markdown](https://www.markdownguide.org/getting-started) and [GitHub pages](https://pages.github.com/).
+
+##### Step 1 - GitHub
+Start by creating an account on [GitHub](https://github.com/join)
+
+##### Step 2 - Create Repository
+Create a repository on GitHub to hold your files and host your resume. You can find out how to do that [here](https://pages.github.com/)
+
+##### Step 3 - Download Resume Template
+Download and extract the following zip into the git repository you have just created. [resume-template.zip](https://github.com/sproogen/modern-resume-theme/archive/gh-pages.zip)
+
+##### Step 4 - Push it
+Commit and push the resume template to github
 ```
-./
-├── .editorconfig
-├── gulpfile.js
-├── package.json
-├── README.md
-|
-├── gulp_tasks/                                * gulp tasks
-|   ├── config/                                * gulp tasks config
-│   |   ├── paths.js
-│   |   └── aliases.js
-│   |
-|   └── task.js
-|
-├── screenshots/                               * responsive test screenshots
-|
-├── dev/                                       * site source
-│   ├── images/                                * image sources
-|   │
-│   ├── pug/                                   * templates
-|   |   ├── blocks/                            * blocks library
-|   │   |   └── block.pug
-|   │   ├── helpers/                           * helper mixins
-|   │   ├── vendor/                            * third-party code
-|   │   ├── layouts/                           * page layouts
-|   │   └── pages/                             * main pages templates
-|   │
-│   ├── js/                                    * source js
-|   |   ├── vendor/                            * vendor scripts library
-|   |   ├── lib/                               * site scripts library
-|   │   ├── head.js                            * head scripts
-|   │   └── body.js                            * body scripts
-|   │
-|   ├── sass/                                  * sass preprocessor styles
-|   |   ├── blocks/                            * blocks library
-|   │   |   └── block.sass
-|   │   ├── helpers/                           * mixins and vars
-|   │   ├── vendor/                            * third-party code
-|   │   ├── custom.sass
-|   │   ├── noscript.sass
-|   │   └── screen.sass
-|   │
-│   ├── helpers/                               * helper files
-|   |   ├── favicon.ico
-|   |   └── .htaccess
-|   │
-│   ├── fonts/                                 * font sources
-|   │
-│   └── data/                                  * configs and data for templates
-│
-└── build/                                     * built source
-    ├── index.html
-    ├── page.html
-    |
-    └── static/                                * static assets
-        ├── css/                               * minified styles
-        |
-        ├── images/                            * minified images
-        │
-        ├── js/                                * minified assembled js
-        |
-        └── fonts/                             * @font-face-ready webfonts
+$ git add --all
+$ git commit -m "Initial resume setup"
+$ git push -u origin master
+```
+##### Set 5 - See it
+You should now be able to see the demo resume template using this theme at `[your-username].github.io`
 
+## Usage
+
+So now you will be able to see the demo template at your github url. You can can edit the yml files and replace the demo content with your own. Hopefully it will be fairly simple to work out where all the content goes, but here is a quick overview.
+
+##### _config.yml
+This will contain all the of the main configuration for your resume such as your name, email, social media links and about me content. It will also allow you to change the titles of some of the content sections.
+A full example of the _config.yml can be found [here](https://github.com/sproogen/modern-resume-theme/blob/master/_config.yml)
+
+##### Dark Mode
+Dark mode is configured via _config.yml 
+```
+darkmode: true/false
 ```
 
-## Requirements
+##### _data/education.yml
+A list of all your education, each education will follow this format
+```
+- layout: left (options: left, right, top, top-right, top-middle)
+  name: Institution name
+  dates: Date Range (eg. 2016 - 2019)
+  qualification: Qualifications (eg. BA Performing Arts)
+  quote: >
+    Short institution or course description (optional)
+  description: | # this will include new lines to allow paragraphs
+    Description of qualification
+```
 
-- [Node.js](http://nodejs.org/)
-- Build sytem: [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)
-- Optionally:
-  * [Editorconfig](http://editorconfig.org/)
+##### _data/experience.yml
+A list of all your experience, each experience will follow this format
+```
+- layout: left (options: left, right, top, top-right, top-middle)
+  company: Company name
+  link: Link to company (eg. https://google.com)(optional)
+  job_title: Job title
+  dates: Date Range (eg. November 2016 - present)
+  quote: >
+   Short description of the company (optional)
+  description: | # this will include new lines to allow paragraphs
+    Description of role
+```
 
-#### Editorconfig
+If you wish to specify multiple job titles for a single company, use this format
+```
+- layout: left (options: left, right, top, top-right, top-middle)
+  company: Company name
+  link: Link to company (optional)
+  jobs:
+    - title: Job title 1
+      dates: Date Range (eg. November 2016 - present)
+    - title: Job title 2
+      dates: Date Range (eg. January 2015 - November 2016)
+  quote: >
+   Short description of the company (optional)
+  description: | # this will include new lines to allow paragraphs
+    Description of role
+```
 
-This project has an .editorconfig file at the root. It describes indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/)
+##### _data/projects.yml
+A list of all your projects, each project will follow this format
+```
+- layout: left (options: left, right, top, top-right, top-middle)
+  name: Project name
+  link: Link to project (eg. https://sproogen.github.io/modern-resume-theme)(optional)
+  github: Github page for project (eg. sproogen/modern-resume-theme)(optional)
+  quote: >
+    Short overview of the project (optional)
+  description: | # this will include new lines to allow paragraphs
+    Description about the work on/with the project
+```
 
-## How to start
+##### assets/main.scss
+Add any css changes or additions you want to make here after the line `@import 'modern-resume-theme';`
 
-If you haven't used [Gulp](http://gulpjs.com/) before, be sure to check out the [Getting Started]([https://github.com/gulpjs/gulp/blob/master/docs/README.md](https://gulpjs.com/docs/en/getting-started/quick-start)) guide, also check these [recips](https://github.com/gulpjs/gulp/tree/master/docs/recipes#recipes)
+## Running locally
 
-Before start you need to have installed _npm_ , as well as _gulp_ globally.
+Before you start make sure you have *Ruby* and the gems for *Jekyll* installed locally. You can find out how to do that [here](https://jekyllrb.com/docs/installation/).
 
-**A few simple steps to start:**
-* Install dependencies from `package.json` by running: `npm install`.
-* Run tasks from the list below and start devevelopment!
-* Edit general settings in `dev/data/config.json` See [Site configuration](#site-configuration) section
+1. Clone your resume repository locally *(if you haven't already)*
+2. `cd [your-repository-name]`
+3. `bundle install`
+4. `bundle exec jekyll serve`
+5. Open your browser to `http://localhost:4000`
 
-## Site configuration
+Any changes you make will automatically build and you will be able to see these by refreshing your browser.
 
-This boilerplate uses Pug templates with external data configs.
-Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`
+*Note: You will need to re-run `bundle exec jekyll serve` to see changes made in `_config.yml`.*
 
-## Tasks
+## Contributing
 
-Here comes groups ofgulp tasks with some explanations
+Bug reports and pull requests are welcome on GitHub at https://github.com/sproogen/modern-resume-theme. You can view our full guide to contributing [here](https://github.com/sproogen/modern-resume-theme/blob/master/CONTRIBUTING.md)
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-#### Cleanup
+## Development
 
-Remove placeholders from work directories.
-Gulp: `gulp cleanup`
+### Locally
 
-* Remove gitkeep files
+Before you start make sure you have *Ruby* and the gems for *Jekyll* installed locally. You can find out how to do that [here](https://jekyllrb.com/docs/installation/).
 
-#### Dev
+*Note: You will need version `1.15.2` of bundler, as this is the only version that Heroku supports.*
 
-Dev task with static server.
-Gulp: `gulp dev`
+1. Fork and or clone this repository locally
+2. `cd modern-resume-theme`
+3. `bundle install`
+4. `bundle exec jekyll serve`
+5. Open your browser to `http://localhost:4000`
 
-* Bundle javascripts
-* Compile Sass stylesheets
-* Add vendor prefixes in css
-* Combine media queries in css files
-* Compile Pug templates
-* Sync helpers and other assets
-* Sync fonts
-* Sync images
-* Run BrowserSync static server with live reload using
-* Watch for changes and run dev task
+Any changes you make will automatically build and you will be able to see these by refreshing your browser. To find out more about *Jekyll* take a look [here](https://jekyllrb.com/docs/usage/).
 
+*Note: You will need to re-run `bundle exec jekyll serve` to see changes made in `_config.yml`.*
 
-#### Build
+### Docker
 
-Build task.
-Gulp: `gulp build`
-
-* Minify images
-* Minify javascript files
-* Minify stylesheets
-* Minify html
-* Run BrowserSync static server
-
-
-#### Rebuild
-
-Regenerate and build project by running all tasks.
-Gulp: `gulp rebuild`
-
-* Bundle javascripts
-* Compile Sass stylesheets
-* Add vendor prefixes in css
-* Combine media queries in css files
-* Compile Pug templates
-* Sync helpers and other assets
-* Sync fonts
-* Sync images
-* Minify images
-* Minify javascript files
-* Minify stylesheets
-* Minify html
-
-
-#### Server
-
-Run server without watching for changes.
-Gulp: `gulp server`
-
-* Run BrowserSync static server
-
-
-## Live reload
-
-This project uses BrowserSync as static server with enabled and configured live reload option.
+If you have docker installed you can simply run `docker-compose up` to launch the site in a container, it will then be hosted at `http://localhost:4000`
 
 ## License
-[MIT](https://github.com/website-templates/portfolio_one-page-template/blob/master/LICENSE.md)
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
