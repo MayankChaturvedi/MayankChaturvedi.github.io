@@ -1,5 +1,7 @@
 - layout: top-middle
-  name: Data Engine
+  name:
+   -Data Engine
+   -RecommenderSystem
   #link: github.com/sproogen
   #github: sproogen/resume-theme
   quote: >
