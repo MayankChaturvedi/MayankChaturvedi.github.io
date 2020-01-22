@@ -1,16 +1,16 @@
 - layout: top-middle
-  name: Data Engine
+  name: Word Autocomplete program
   #link: github.com/sproogen
   #github: sproogen/resume-theme
   quote: >
-    This is a project designed to track the movements and decisions of companies involved if NSE and BSE
+    A project designed to autocomplete the words of users.
   description: | # this will include new lines to allow paragraphs
-    I and my friends started this project as a way of learning <mark>Web Scraping</mark> and <mark>Machine Learning</mark> it has since been improving and growing. The developed product is aimed to provide information about company movements through various online sources, and the machine learning algorithm assigns a confidence value of the movement.
+    I made this project to learn and implement the data strucutre <mark>tries</mark>. The project is designed in java. I am currently working to improve the performance of the program by introducing machine learning algorithms alongside the data structure idea used. 
 - layout: top-middle
-  name: Word Autocomplete and recommender system
-  #link: github.com/sproogen
-  #github: sproogen/resume-theme
-  quote: >
-    This is a project designed autocomplete the words of user
-  description: | # this will include new lines to allow paragraphs
-    I made this project to learn and implement the data strucutre tries and to improve experience of users using machine learning.
+name: Data Engine
+#link: github.com/sproogen
+#github: sproogen/resume-theme
+quote: >
+  This is a project designed to track the movements and decisions of companies involved if NSE and BSE
+description: | # this will include new lines to allow paragraphs
+  I and my friends started this project as a way of learning <mark>Web Scraping</mark> and <mark>Machine Learning</mark> it has since been improving and growing. The developed product is aimed to provide information about company movements through various online sources, and the machine learning algorithm assigns a confidence value of the movement.
