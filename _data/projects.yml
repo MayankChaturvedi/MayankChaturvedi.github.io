@@ -6,3 +6,12 @@
     This is a project designed to track the movements and decisions of companies involved NSE and BSE
   description: | # this will include new lines to allow paragraphs
     I and my friends started this project as a way of learning <mark>Web Scraping</mark> and <mark>Machine Learning</mark> it has since been improving and growing. The developed product is aimed to provide information about company movements through various online sources, and the machine learning algorithm assigns a confidence value of the movement.
+
+- layout: top-middle
+name: Data Engine
+#link: github.com/sproogen
+#github: sproogen/resume-theme
+quote: >
+  This is a project designed to track the movements and decisions of companies involved NSE and BSE
+description: | # this will include new lines to allow paragraphs
+  I and my friends started this project as a way of learning <mark>Web Scraping</mark> and <mark>Machine Learning</mark> it has since been improving and growing. The developed product is aimed to provide information about company movements through various online sources, and the machine learning algorithm assigns a confidence value of the movement.
