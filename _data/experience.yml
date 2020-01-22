@@ -7,3 +7,12 @@
    Designing and deploying a chatbot for solving reservation and rail earning queries of 23.07 million passengers travelling everyday in Indian railways
   description: | # this will include new lines to allow paragraphs
     Indian Railways is world's largest passenger carrying service. I was assigned role to design the chatbot over google dialogflow and build a backend server to support the chatbot queries. I enjoyed helping the company drive toward new AI technology(NLP) as well as learnt various backend development skills.
+- layout: left
+company: Centre for Railway Information Systems, New Delhi
+link: http://cris.org.in/
+job_title: Software Development Intern
+dates: May 2017 - July 2017
+quote: >
+ Designing and deploying a chatbot for solving reservation and rail earning queries of 23.07 million passengers travelling everyday in Indian railways
+description: | # this will include new lines to allow paragraphs
+  Indian Railways is world's largest passenger carrying service. I was assigned role to design the chatbot over google dialogflow and build a backend server to support the chatbot queries. I enjoyed helping the company drive toward new AI technology(NLP) as well as learnt various backend development skills.
